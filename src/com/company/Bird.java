@@ -1,15 +1,9 @@
 package com.company;
 
-import com.company.Animal;
-
-public class Bird implements Animal {
-    @Override
-    public void speak() {
-        System.out.println("Chirp");
+public class Bird extends Animal {
+    public Bird(){
+        speakBehavior = new ChirpBehavior();
+        travelBehavior = new FlyBehavior();
     }
 
-    @Override
-    public void travel() {
-        System.out.println("Fly");
-    }
 }

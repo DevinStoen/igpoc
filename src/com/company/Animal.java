@@ -1,10 +1,17 @@
 package com.company;
 
-public interface Animal {
+public abstract class Animal {
 
-    public abstract void speak();
+    ISpeakBehavior speakBehavior = null;
+    ITravelBehavior travelBehavior = null;
 
-    public abstract void travel();
+    public void speak(){
+        // null check
+        speakBehavior.speak();
+    }
 
+    public void travel(){
+        travelBehavior.travel();
+    }
 
 }

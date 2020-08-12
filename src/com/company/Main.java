@@ -3,7 +3,12 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        strategyPattern();
+
+    }
+
+    public static void strategyPattern(){
         System.out.println("Hello World");
         Animal cow = new Cow();
 
@@ -11,8 +16,7 @@ public class Main {
 
         cow.speak();
         bird.travel();
-
-
-
     }
+
+
 }
